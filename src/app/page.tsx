@@ -1,5 +1,7 @@
 "use client";
+import { useCallback, useEffect } from "react";
 import { styled } from "styled-components";
+import CharactersService from "~/services/Characters";
 
 const Title = styled.h1`
   font-size: 1.5em;
@@ -8,5 +10,15 @@ const Title = styled.h1`
 `;
 
 export default function Home() {
+  const loadCharacters = useCallback(async () => {
+    const charactersList = await CharactersService.listCharacters();
+
+    console.log("charactersList", charactersList);
+  }, []);
+
+  useEffect(() => {
+    loadCharacters();
+  }, [loadCharacters]);
+
   return <Title>Marvel Heroes</Title>;
 }
