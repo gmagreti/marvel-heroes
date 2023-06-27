@@ -17,6 +17,15 @@ class CharactersService {
 
     return httpResponse;
   }
+
+  async getCharactersById(id: string) {
+    const httpResponse = await this.httpClient.request({
+      url: `characters/${id}`,
+      method: "get",
+    });
+
+    return httpResponse;
+  }
 }
 
 export default new CharactersService();
