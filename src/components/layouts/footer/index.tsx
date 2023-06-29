@@ -1,9 +1,10 @@
+import { Container } from "~layouts";
 import * as Styled from "./styles";
 
-export function Header() {
+export function Footer() {
   return (
-    <Styled.Container>
-      <h1>Header</h1>
-    </Styled.Container>
+    <Container>
+      <h1>Footer</h1>
+    </Container>
   );
 }
