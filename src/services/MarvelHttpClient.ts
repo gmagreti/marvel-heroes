@@ -29,8 +29,8 @@ class MarvelHttpClient {
     }
 
     return {
-      statusCode: axiosResponse.status,
-      body: axiosResponse.data,
+      statusCode: axiosResponse?.status,
+      body: axiosResponse?.data,
     };
   }
 }
