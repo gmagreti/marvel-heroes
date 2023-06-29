@@ -2,7 +2,7 @@
 import { useCallback, useEffect } from "react";
 import { styled } from "styled-components";
 import { Header } from "~/components/layouts";
-// import CharactersService from "~/services/characters";
+import CharactersService from "~/services/characters";
 
 const Title = styled.h1`
   font-size: 1.5em;
@@ -11,15 +11,15 @@ const Title = styled.h1`
 `;
 
 export default function Home() {
-  // const loadCharacters = useCallback(async () => {
-  //   const charactersList = await CharactersService.listCharacters();
+  const loadCharacters = useCallback(async () => {
+    const charactersList = await CharactersService.listCharacters();
 
-  //   console.log("charactersList", charactersList);
-  // }, []);
+    console.log("charactersList", charactersList);
+  }, []);
 
-  // useEffect(() => {
-  //   loadCharacters();
-  // }, [loadCharacters]);
+  useEffect(() => {
+    loadCharacters();
+  }, [loadCharacters]);
 
   return (
     <>
