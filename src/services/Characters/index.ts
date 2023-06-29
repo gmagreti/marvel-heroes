@@ -1,4 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
+import { api } from "~/lib/axios";
 import MarvelHttpClient from "../MarvelHttpClient";
 
 class CharactersService {
@@ -9,13 +10,11 @@ class CharactersService {
   }
 
   async listCharacters(params?: any) {
-    const httpResponse = await this.httpClient.request({
-      url: "characters",
-      method: "get",
-      params: params,
+    const response = await api.get(`/chacacters/list-characters`, {
+      params,
     });
 
-    return httpResponse;
+    return response;
   }
 
   async getCharactersById(id: string) {
