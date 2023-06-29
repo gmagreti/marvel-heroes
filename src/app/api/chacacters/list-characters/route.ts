@@ -1,10 +1,9 @@
-import { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 import MarvelHttpClient from "~/services/MarvelHttpClient";
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: any) {
   if (req.method !== "GET") {
-    return res.status(405).end();
+    return NextResponse.json({ message: "Request invalid" });
   }
 
   const httpClient = new MarvelHttpClient();
