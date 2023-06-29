@@ -1,7 +1,7 @@
 "use client";
 import { useCallback, useEffect } from "react";
 import { styled } from "styled-components";
-import CharactersService from "~/services/Characters";
+import CharactersService from "~/services/characters";
 
 const Title = styled.h1`
   font-size: 1.5em;
