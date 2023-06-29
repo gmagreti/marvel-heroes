@@ -27,4 +27,4 @@ class CharactersService {
   }
 }
 
-export default new CharactersService();
+export const charactersService = new CharactersService();
