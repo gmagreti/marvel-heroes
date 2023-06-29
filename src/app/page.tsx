@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect } from "react";
 import { styled } from "styled-components";
+import { Header } from "~/components/layouts";
 import CharactersService from "~/services/characters";
 
 const Title = styled.h1`
@@ -20,5 +21,10 @@ export default function Home() {
     loadCharacters();
   }, [loadCharacters]);
 
-  return <Title>Marvel Heroes</Title>;
+  return (
+    <>
+      <Header />
+      <Title>Marvel Heroes</Title>
+    </>
+  );
 }
