@@ -2,7 +2,7 @@
 import { useCallback, useEffect } from "react";
 import { styled } from "styled-components";
 import { Header } from "~/components/layouts";
-import CharactersService from "~services";
+import CharactersService from "../services/characters";
 
 const Title = styled.h1`
   font-size: 1.5em;
