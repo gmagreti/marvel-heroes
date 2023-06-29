@@ -24,7 +24,8 @@
       "~/*": ["src/*"],
 
       /* components folders */
-      "~layouts": ["src/components/layouts/index"]
+      "~layouts": ["src/components/layouts/index"],
+      "~services": ["src/services/characters/index"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
