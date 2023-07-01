@@ -1,9 +1,30 @@
 import { Container } from "../container";
 
-export function NavBar() {
+import * as Styled from "./styles";
+
+type NavLink = {
+  href: string;
+  name: string;
+};
+
+type NavBarProps = {
+  navLinks: NavLink[];
+};
+
+export function NavBar({ navLinks }: NavBarProps) {
   return (
-    <Container>
-      <h1>Nav bar</h1>
-    </Container>
+    <Styled.Root>
+      <Container>
+        <Styled.NavList>
+          {navLinks.map((navItem) => (
+            <li key={navItem.name}>
+              <Styled.NavLink href={navItem.href}>
+                {navItem.name}
+              </Styled.NavLink>
+            </li>
+          ))}
+        </Styled.NavList>
+      </Container>
+    </Styled.Root>
   );
 }
