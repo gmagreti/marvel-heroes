@@ -7,4 +7,5 @@ export const Container = styled.div`
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
+  background-color: transparent;
 `;
