@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import { api } from "~/lib/axios";
-import MarvelHttpClient from "./MarvelHttpClient";
+import MarvelHttpClient from "../MarvelHttpClient";
 
 class CharactersService {
   httpClient: MarvelHttpClient;
