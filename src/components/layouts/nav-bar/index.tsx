@@ -1,3 +1,4 @@
+"use client";
 import { Container } from "../container";
 
 import * as Styled from "./styles";

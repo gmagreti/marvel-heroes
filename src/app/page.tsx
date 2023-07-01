@@ -1,12 +1,9 @@
-"use client";
-import { Header, NavBar } from "~/components/layouts";
-import { navLinks } from "~/mocks/nav-links";
+import { Container } from "~/components/layouts";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <NavBar navLinks={navLinks} />
-    </>
+    <Container>
+      <h1>The content is coming</h1>
+    </Container>
   );
 }

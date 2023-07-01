@@ -1,5 +1,6 @@
+"use client";
 import Link from "next/link";
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const Root = styled.div`
   background-color: #202020;

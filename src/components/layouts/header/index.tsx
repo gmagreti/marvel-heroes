@@ -1,3 +1,4 @@
+"use client";
 import { Container } from "~layouts";
 import { LogoMarvel } from "~/components/icons";
 
