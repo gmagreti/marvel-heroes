@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import { Header, NavBar } from "~/components/layouts";
-import ThemeProvider from "~/context/ThemeProvider";
 import StyledComponentsRegistry from "~/lib/registry";
 import { navLinks } from "~/mocks/nav-links";
 
@@ -22,11 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <StyledComponentsRegistry>
-          <ThemeProvider>
-            <Header />
-            <NavBar navLinks={navLinks} />
-            {children}
-          </ThemeProvider>
+          <Header />
+          <NavBar navLinks={navLinks} />
+          {children}
         </StyledComponentsRegistry>
       </body>
     </html>
