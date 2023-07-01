@@ -1,6 +1,9 @@
 import { Inter } from "next/font/google";
-
+import { Header, NavBar } from "~/components/layouts";
+import ThemeProvider from "~/context/ThemeProvider";
 import StyledComponentsRegistry from "~/lib/registry";
+import { navLinks } from "~/mocks/nav-links";
+
 import "~/styles/global.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <ThemeProvider>
+            <Header />
+            <NavBar navLinks={navLinks} />
+            {children}
+          </ThemeProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
