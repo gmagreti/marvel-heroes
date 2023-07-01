@@ -1,10 +1,15 @@
 import { Container } from "~layouts";
-// import * as Styled from "./styles";
+import { LogoMarvel } from "~/components/icons";
+
+import * as Styled from "./styles";
 
 export function Header() {
+  const logo = <LogoMarvel />;
   return (
-    <Container>
-      <h1>Header</h1>
-    </Container>
+    <Styled.Root>
+      <Container>
+        <LogoMarvel />
+      </Container>
+    </Styled.Root>
   );
 }
